@@ -25,7 +25,7 @@ class PanResponderExample extends Component {
     LayoutAnimation.spring();
   }
   onPress() {
-    LayoutAnimation.configureNext();
+    LayoutAnimation.spring();
     this.change = this.state.w == maxWidth ? -20 : (this.state.w == minWidth ? 20 : this.change);
     this.setState({ w: this.state.w + this.change, h: this.state.h + this.change })
   }
