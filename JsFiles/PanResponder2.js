@@ -36,7 +36,7 @@ var PanResponderExample = React.createClass({
       onPanResponderRelease: this._handlePanResponderEnd,
       onPanResponderTerminate: this._handlePanResponderEnd
     });
-    this._previousLeft =-40;
+    this._previousLeft = -40;
     this._previousTop = 200;
     this._circleStyles = {
       style: {
@@ -56,7 +56,7 @@ var PanResponderExample = React.createClass({
 
     return React.createElement(
       View,
-      {style: styles.container },
+      { style: styles.container },
       React.createElement(View, _extends({
         ref: function ref(circle) {
           _this.circle = circle;
@@ -99,7 +99,7 @@ var PanResponderExample = React.createClass({
     this._updateNativeStyles();
   },
   _handlePanResponderEnd: function _handlePanResponderEnd(e, gestureState) {
-    
+
     this._unHighlight();
     this._previousLeft += gestureState.dx;
     this._previousTop += gestureState.dy;

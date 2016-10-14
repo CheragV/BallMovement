@@ -15,12 +15,12 @@ import PanResponder1 from './JsFiles/PanResponder1'
 import PanResponder2 from './JsFiles/PanResponder2'
 import PanResponder3 from './JsFiles/PanResponder3'
 import PanResponder4 from './JsFiles/PanResponder4'
-
+import PanResponder5 from './JsFiles/PanResponder5'
 export default class BallMovement extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <PanResponder4/>
+        <PanResponder5/>
       </View>
     );
   }

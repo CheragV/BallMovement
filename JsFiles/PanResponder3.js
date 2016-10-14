@@ -13,38 +13,38 @@ var processColor = ReactNative.processColor;
 
 
 var CIRCLE_SIZE = 80;
-var SPRING_CONFIG = {tension: 1, friction: 2};
+var SPRING_CONFIG = { tension: 1, friction: 2 };
 
 class PanResponderExample extends React.Component {
-   constructor(props) {
-     super(props);
-     this.state = {
-       pan: new Animated.ValueXY(), // inits to zero
-     };
-     this.state.panResponder = PanResponder.create({
-       onStartShouldSetPanResponder: () => true,
-       onPanResponderMove: Animated.event([null, {
-         dx: this.state.pan.x, // x,y are Animated.Value
-         dy: this.state.pan.y,
-       }]),
-       onPanResponderRelease: () => {
-         Animated.spring(
-           this.state.pan,         // Auto-multiplexed
-           {toValue: {x: 0, y: 0}} // Back to zero
-         ).start();
-       },
-     });
-   }
-   render() {
-     return (
-       <Animated.View
-         {...this.state.panResponder.panHandlers}
-         style={this.state.pan.getLayout()}>
-         <View style={styles.circle}></View>
-       </Animated.View>
-     );
-   }
- }
+  constructor(props) {
+    super(props);
+    this.state = {
+      pan: new Animated.ValueXY(), // inits to zero
+    };
+    this.state.panResponder = PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onPanResponderMove: Animated.event([null, {
+        dx: this.state.pan.x, // x,y are Animated.Value
+        dy: this.state.pan.y,
+      }]),
+      onPanResponderRelease: () => {
+        Animated.spring(
+          this.state.pan,         // Auto-multiplexed
+          { toValue: { x: 0, y: 0 } } // Back to zero
+        ).start();
+      },
+    });
+  }
+  render() {
+    return (
+      <Animated.View
+        {...this.state.panResponder.panHandlers}
+        style={this.state.pan.getLayout() }>
+        <View style={styles.circle}></View>
+      </Animated.View>
+    );
+  }
+}
 
 var styles = StyleSheet.create({
   circle: {
@@ -52,7 +52,7 @@ var styles = StyleSheet.create({
     height: CIRCLE_SIZE,
     borderRadius: CIRCLE_SIZE / 2,
     position: 'relative',
-    backgroundColor:"red",
+    backgroundColor: "red",
     left: 0,
     top: 0
   },

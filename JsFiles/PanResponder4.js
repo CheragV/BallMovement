@@ -13,22 +13,20 @@ class PanResponderExample extends Component {
 
   constructor(props) {
     super(props);
-    minWidth = minHeight = 100;
-    maxWidth = maxHeight = 200;
+    minWidth = 100;
+    maxWidth = 200;
     change = 20;
     this.state = {
       w: 100,
       h: 100
     }
-    // this.onPress=this.onPress.bind(this); 
   }
   componentWillMount() {
     LayoutAnimation.spring();
   }
   onPress() {
-    LayoutAnimation.spring();
-    if (this.state.w == maxWidth) { this.change = -20; }
-    else if (this.state.w == minWidth) { this.change = 20; }
+    LayoutAnimation.configureNext();
+    this.change = this.state.w == maxWidth ? -20 : (this.state.w == minWidth ? 20 : this.change);
     this.setState({ w: this.state.w + this.change, h: this.state.h + this.change })
   }
 
@@ -42,11 +40,8 @@ class PanResponderExample extends Component {
           </View>
         </TouchableOpacity>
       </View>
-
     );
   }
-
-
 }
 
 const styles = StyleSheet.create({
