@@ -1,5 +1,5 @@
 # BallMovement
-This is a repository to keep track of various animations learned yet. I would recommend beginners to have a look.
+This is a react-native repository to keep track of various animations learned yet. I would recommend beginners to have a look.
 
 The folder JSFiles contain files having different types of animations
 
