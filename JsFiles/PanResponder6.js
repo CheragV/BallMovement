@@ -18,15 +18,8 @@ class PanResponderExample extends Component {
         this.state={
             animatedValue:new Animated.Value(18),
         }
-        // this.count=1.3;
     }
-    componentDidMount() {
-        // this.setState.animatedValue.setValue(1)
-        // Animated.timing(this.state.animatedValue,{
-        //     toValue:1.3,
-        //     duration:500
-        // }).start();
-    }
+    componentDidMount() { }
     handlePress() {
         console.log("handlePress initiated :)")
         Animated.timing(this.state.animatedValue,{
