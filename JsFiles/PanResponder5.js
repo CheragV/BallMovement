@@ -17,7 +17,7 @@ class PanResponderExample extends Component {
             bounceValue: new Animated.Value(1),
         };
     }
-    componentDidMount() {                   ///This is need when we want to show the animation at the beginning
+    componentDidMount() {                   //This is need when we want to show the animation at the beginning
         // this.state.bounceValue.setValue(1.2);    
         // Animated.spring(
         //     this.state.bounceValue, {

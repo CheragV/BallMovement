@@ -13,7 +13,7 @@ var processColor = ReactNative.processColor;
 
 
 var CIRCLE_SIZE = 80;
-var SPRING_CONFIG = { tension: 1, friction: 2 };
+var SPRING_CONFIG = { tension: 0.1, friction: 4 };
 
 class PanResponderExample extends React.Component {
   constructor(props) {
